@@ -9,11 +9,15 @@ authors = ["mkost148 <mkost148@gmail.com>"]
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.scripts.brain_even:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+prompt = "^0.4.1"
+
 
 [tool.poetry.dev-dependencies]
+wemake-python-styleguide = "^0.16.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

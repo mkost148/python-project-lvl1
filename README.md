@@ -6,3 +6,6 @@ Installing the brain_even game: https://asciinema.org/a/yICyn2LeUiEJOQvoFJt0p0TF
 Playing the brain_even game:
     - correct results https://asciinema.org/a/a4g1trPFGjYsjOJVoXgVjZDM5
     - incorrect results https://asciinema.org/a/w3Lwx2X3O2RilDpatZXIrujAC
+
+Two games in one package - "Calculator" and "Even" - with difficulty request:
+    https://asciinema.org/a/ERrf4DmKgZMG00wp1iZjb80NO

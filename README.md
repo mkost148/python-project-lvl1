@@ -9,3 +9,7 @@ Playing the brain_even game:
 
 Two games in one package - "Calculator" and "Even" - with difficulty request:
     https://asciinema.org/a/ERrf4DmKgZMG00wp1iZjb80NO
+
+
+UPDATE: Now TREE in ONE! Add "Greatest common divisor" game! Let's play:
+    https://asciinema.org/a/ZhnJPm3qyikv5FZPEfLzbT6Og

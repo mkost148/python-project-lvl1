@@ -1,6 +1,7 @@
 import prompt
 from brain_games.games.brain_even import even
 from brain_games.games.brain_calc import calc
+from brain_games.games.brain_gcd import gcd
 
 
 num_of_attempts = 3
@@ -16,14 +17,18 @@ def hello():
 def main():
     user_name = hello()
     while True:
-        game_type = prompt.character('Plase select a game: <C>alculator, <E>ven, or <any other key> to quit: ')
+        game_type = prompt.character('Plase select a game: "<C>alculator", "odd or <E>ven", "greatest common <D>ivisor" or <any other key> to quit: ')
         game_type = game_type.upper()
+
         if game_type == 'C':
             difficulty = prompt.integer('Please choose difficulty (maximum number to operate with): ')
             calc(user_name, num_of_attempts, difficulty)
         elif game_type == 'E':
             difficulty = prompt.integer('Please choose difficulty (maximum number to operate with): ')
             even(user_name, num_of_attempts, difficulty)
+        elif game_type == 'D':
+            difficulty = prompt.integer('Please choose difficulty (maximum number to operate with): ')
+            gcd(user_name, num_of_attempts, difficulty)
         else:
             print(f'Thanks for playing, {user_name}! Bye!')
             return

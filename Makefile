@@ -8,7 +8,7 @@ build:
 	poetry build
 
 publish:
-	poetry publish --dry-run
+	poetry publish --dry-run -q -n
 
 package-install:
 	python3 -m pip install --user --force-reinstall dist/*.whl
@@ -16,6 +16,4 @@ package-install:
 brain-games:
 	poetry run brain-games
 
-doall:
-	poetry build && poetry publish --dry-run -n && python3 -m pip install --user --force-reinstall dist/*.whl
-
+doall: build publish package-install

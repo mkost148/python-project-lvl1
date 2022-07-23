@@ -33,4 +33,4 @@ def calc(user_name, num_of_attempts, difficulty):
         print(f'Congratulations, {user_name}!')
 
 if __name__ == '__main__':
-    calc("Mike_test", 3, 99)
+    calc("test", 3, 99)

@@ -34,4 +34,4 @@ def even(user_name, num_of_attempts, difficulty):
 
 
 if __name__ == '__main__':
-    even("Mike_test", 3, 99)
+    even("test", 3, 99)

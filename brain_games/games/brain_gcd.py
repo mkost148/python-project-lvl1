@@ -46,4 +46,4 @@ def gcd(user_name, num_of_attempts, difficulty):
 
 
 if __name__ == '__main__':
-    gcd("Mike_test", 3, 99)
+    gcd("test", 3, 99)

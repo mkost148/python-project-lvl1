@@ -2,22 +2,24 @@
 [![Actions Status](https://github.com/mkost148/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/mkost148/python-project-lvl1/actions)
 <a href="https://codeclimate.com/github/mkost148/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/81e25725e4ae3496409a/maintainability" /></a>
 
-The famous 5-in-1 game "Brain_Games"!
+The famous 5-in-1 "Brain Games": "Odd or Even", "Calculator", "Greatest common divisor", "Progression" and "Prime" by Hexlet.
 
-How to install: https://asciinema.org/a/yICyn2LeUiEJOQvoFJt0p0TFZ
+Minimum requirements: python 3
 
-UPD4: Add "Prime" game! Enjoy!
-    https://asciinema.org/a/zlauRr0DA4nI90BsRYCubg0OK
+How to install:
+    cd python-project-lvl1
+    python3 -m pip install --user --force-reinstall dist/*.whl
+Asciinema of installation process: https://asciinema.org/a/VnLsnaxKetu4MiEHlH7LCmxic
 
-UPD3: Add "Progression" game! How to play:
-    https://asciinema.org/a/BP88Tt6XNVn51jIpCvtrdBmml
+How to run:
+    after installing, you can run 'brain-go' shell or run each game directly like 'brain-calc' or 'brain-gcd' etc.
 
-UPD2: Now TREE in ONE! Add "Greatest common divisor" game! Let's play:
-    https://asciinema.org/a/ZhnJPm3qyikv5FZPEfLzbT6Og
+"Prime" game: https://asciinema.org/a/wWUHMvMADWGs2RYgNowQzEYCM
 
-UPD1: Two games in one package - "Calculator" and "Even" - with difficulty request:
-    https://asciinema.org/a/ERrf4DmKgZMG00wp1iZjb80NO
+"Progression" game: https://asciinema.org/a/QzRbUZ5GZZuPJe9MOQnxHtfvN
 
-Version 1. "Odd or Even" game:
-    - correct results https://asciinema.org/a/a4g1trPFGjYsjOJVoXgVjZDM5
-    - incorrect results https://asciinema.org/a/w3Lwx2X3O2RilDpatZXIrujAC
+"Greatest common divisor": https://asciinema.org/a/Bw8dfhlwSO6eMACQhzsvsQ39m
+
+"Calculator": https://asciinema.org/a/HisEPznj3gb0f8hX3b5WpjGuv
+
+"Odd or Even": https://asciinema.org/a/MzwRpVprsf7lBWQpD8ToTl9qA

@@ -22,7 +22,7 @@ def get_gcd(num1, num2):
     return result
 
 
-def gcd(user_name, num_of_attempts, difficulty):
+def gcd(num_of_attempts=3, difficulty=20):
     print('Find the greatest common divisor of given numbers.')
     scores = 0
     while scores < num_of_attempts:
@@ -38,12 +38,12 @@ def gcd(user_name, num_of_attempts, difficulty):
             scores += 1
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {user_name}!")
+            print("'", answer, "' is wrong answer ;(."
+                  " Correct answer was '", correct_answer, "'."
+                  )
             scores = num_of_attempts + 1  # stop the game
-    if scores == num_of_attempts:
-        print(f'Congratulations, {user_name}!')
+    return (scores == num_of_attempts)
 
 
 if __name__ == '__main__':
-    gcd("test", 3, 99)
+    gcd()

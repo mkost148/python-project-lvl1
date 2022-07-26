@@ -3,26 +3,26 @@ import prompt
 
 
 def is_prime(number):
-    """Check if 'number' is prime. Returns boolean"""
-    if abs(number) <= 3:
-        return True
+    """Check if 'number' is prime. Return boolean"""
+    if abs(number) == 1:  # '1' is not prime nor combined number
+        return False
     i = 2
     max_i = number // 2
     while i <= max_i:
         if number % i == 0:
             # uncomment the following for test
-            # print('can be divided by ', str(i)) 
+            # print('can be divided by ', str(i))
             return False
         i += 1
     return True
 
 
-def prime(user_name, num_of_attempts, difficulty):
+def prime(num_of_attempts=3, difficulty=20):
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     scores = 0
     while scores < num_of_attempts:
+        number = random.randint(2, difficulty)  # from 2
 
-        number = random.randint(2, difficulty)  # '1' is not prime nor combined number
         if is_prime(number):
             correct_answer = 'yes'
         else:
@@ -35,13 +35,12 @@ def prime(user_name, num_of_attempts, difficulty):
             scores += 1
             print('Correct!')
         else:
-            print(
-                f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {user_name}!")
+            print("'", answer, "' is wrong answer ;(."
+                  " Correct answer was '", correct_answer, "'."
+                  )
             scores = num_of_attempts + 1  # stop the game
-    if scores == num_of_attempts:
-        print(f'Congratulations, {user_name}!')
+    return (scores == num_of_attempts)
 
 
 if __name__ == '__main__':
-    prime("test", 3, 99)
+    prime()

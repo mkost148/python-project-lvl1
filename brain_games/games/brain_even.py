@@ -7,7 +7,7 @@ def is_even(num):
     return (num % 2) == 0
 
 
-def even(user_name, num_of_attempts, difficulty):
+def even(num_of_attempts=3, difficulty=20):
     print('Answer "yes" if the number is even, otherwise answer "no".')
     scores = 0
     while scores < num_of_attempts:
@@ -25,13 +25,12 @@ def even(user_name, num_of_attempts, difficulty):
             scores += 1
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(.\
-                Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {user_name}!")
+            print("'", answer, "' is wrong answer ;(."
+                  " Correct answer was '", correct_answer, "'."
+                  )
             scores = num_of_attempts + 1  # stop the game
-    if scores == num_of_attempts:
-        print(f'Congratulations, {user_name}!')
+    return (scores == num_of_attempts)
 
 
 if __name__ == '__main__':
-    even("test", 3, 99)
+    even()

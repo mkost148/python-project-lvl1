@@ -2,7 +2,7 @@ import random
 import prompt
 
 
-def calc(user_name, num_of_attempts, difficulty):
+def calc(num_of_attempts=3, difficulty=20):
     oper_sym = ('+', '-', '*')  # three operators are available
     print('What is the result of the expression?')
     scores = 0
@@ -25,12 +25,12 @@ def calc(user_name, num_of_attempts, difficulty):
             scores += 1
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(.\
-                Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {user_name}!")
-            scores = num_of_attempts + 1 #  stop the game
-    if scores == num_of_attempts:
-        print(f'Congratulations, {user_name}!')
+            print("'", answer, "' is wrong answer ;(."
+                  " Correct answer was '", correct_answer, "'."
+                  )
+            scores = num_of_attempts + 1  # stop the game
+    return (scores == num_of_attempts)
+
 
 if __name__ == '__main__':
-    calc("test", 3, 99)
+    calc()

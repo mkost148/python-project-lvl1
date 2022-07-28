@@ -13,37 +13,23 @@ MIN_LEN_OF_PROGRESSION = 5  # minimum quantity of numbers of progression
 REC_LEN_OF_PROGRESSION = 10  # recommended numbers of progression to generate
 
 
-def hello():
-    """Ask for user name"""
-    print('Welcome to the Brain Games!')
-    user_name = prompt.string('May I have your name? ')
-    print(f'Hello, {user_name}!')
-    return user_name
-
-
-def print_answer(correct_answer, answer):
-    print("'", answer, "' is wrong answer ;(."
-          " Correct answer was '", correct_answer, "'."
-          )
-
-
-def launch_game(game_type):
+def launch_game(game_type, attempts=NUM_OF_ATTEMPTS):
     if game_type == 'C':  # Calculator
         difficulty = prompt.integer('Please enter maximum number: ')
-        return calc(NUM_OF_ATTEMPTS, difficulty)
+        return calc(attempts, difficulty)
 
     elif game_type == 'E':  # odd or Even
         difficulty = prompt.integer('Please enter maximum number: ')
-        return even(NUM_OF_ATTEMPTS, difficulty)
+        return even(attempts, difficulty)
 
     elif game_type == 'D':  # Greatest common divisor
         difficulty = prompt.integer('Please enter maximum number: ')
-        return gcd(NUM_OF_ATTEMPTS, difficulty)
+        return gcd(attempts, difficulty)
 
     elif game_type == 'P':  # Progression
         max_initial_num = prompt.integer(
             'Please enter maximum initial number: ')
-        return progss(NUM_OF_ATTEMPTS,
+        return progss(attempts,
                       max_initial_num,
                       MAXIMUM_STEP_OF_PROGRESSION,
                       MIN_LEN_OF_PROGRESSION,
@@ -51,7 +37,7 @@ def launch_game(game_type):
 
     elif game_type == 'I':  # Prime or not
         difficulty = prompt.integer('Please enter maximum number: ')
-        return prime(NUM_OF_ATTEMPTS, difficulty)
+        return prime(attempts, difficulty)
 
 
 def main():

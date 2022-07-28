@@ -2,10 +2,8 @@
 
 import prompt
 
-from brain_games.brain_lib import (
-    hello,
-    launch_game,
-)
+from brain_games.brain_servicelib import hello
+from brain_games.brain_gamelib import NUM_OF_ATTEMPTS, launch_game
 
 
 def main():
@@ -25,7 +23,7 @@ def main():
             print("Thanks for playing, ", str.strip(user_name), "! Bye!")
             return
         elif game_type in 'CEDPI':
-            result = launch_game(game_type)
+            result = launch_game(game_type, NUM_OF_ATTEMPTS)
             if result is True:
                 print(f'Congratulations, {user_name}!')
             else:

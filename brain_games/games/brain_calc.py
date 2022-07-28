@@ -1,6 +1,6 @@
 import random
 import prompt
-from brain_games.brain_lib import print_answer
+from brain_games.brain_servicelib import check_and_print_answer
 
 
 def calc(num_of_attempts=3, difficulty=20):
@@ -22,13 +22,11 @@ def calc(num_of_attempts=3, difficulty=20):
 
         answer = int(prompt.string('Your answer: '))
 
-        if answer == correct_answer:
+        if check_and_print_answer(answer, correct_answer):
             scores += 1
-            print('Correct!')
         else:
-            print_answer(correct_answer, answer)
             scores = num_of_attempts + 1  # stop the game
-    return (scores == num_of_attempts)
+    return (scores == num_of_attempts)  # check if win a game
 
 
 if __name__ == '__main__':

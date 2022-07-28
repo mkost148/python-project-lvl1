@@ -1,5 +1,6 @@
 import random
 import prompt
+from brain_games.brain_lib import print_answer
 
 
 def generate_progss(init, step, length):
@@ -45,9 +46,7 @@ def progss(num_of_attempts=3, max_init=20, max_step=10, min_len=5, rec_len=10):
             scores += 1
             print('Correct!')
         else:
-            print("'", answer, "' is wrong answer ;(."
-                  " Correct answer was '", correct_answer, "'."
-                  )
+            print_answer(correct_answer, answer)
             scores = num_of_attempts + 1  # stop the game
     return (scores == num_of_attempts)
 

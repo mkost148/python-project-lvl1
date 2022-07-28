@@ -2,7 +2,7 @@
 
 import prompt
 
-from brain_games.brain_global import (
+from brain_games.brain_lib import (
     hello,
     launch_game,
 )

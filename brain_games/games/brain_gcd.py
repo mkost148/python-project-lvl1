@@ -1,5 +1,6 @@
 import random
 import prompt
+from brain_games.brain_lib import print_answer
 
 
 def get_gcd(num1, num2):
@@ -38,9 +39,7 @@ def gcd(num_of_attempts=3, difficulty=20):
             scores += 1
             print('Correct!')
         else:
-            print("'", answer, "' is wrong answer ;(."
-                  " Correct answer was '", correct_answer, "'."
-                  )
+            print_answer(correct_answer, answer)
             scores = num_of_attempts + 1  # stop the game
     return (scores == num_of_attempts)
 

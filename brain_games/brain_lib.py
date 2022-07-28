@@ -21,6 +21,12 @@ def hello():
     return user_name
 
 
+def print_answer(correct_answer, answer):
+    print("'", answer, "' is wrong answer ;(."
+          " Correct answer was '", correct_answer, "'."
+          )
+
+
 def launch_game(game_type):
     if game_type == 'C':  # Calculator
         difficulty = prompt.integer('Please enter maximum number: ')

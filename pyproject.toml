@@ -7,9 +7,9 @@ packages = [
   { include = "brain_games" },
 ]
 
-classifiers = [Topic :: Games/Entertainment :: Puzzle Games]
+classifiers = ["Topic :: Games/Entertainment :: Puzzle Games"]
 
-repository = [https://github.com/mkost148/python-project-lvl1]
+repository = "https://github.com/mkost148/python-project-lvl1"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.brain_go:main"

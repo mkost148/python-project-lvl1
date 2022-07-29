@@ -9,8 +9,7 @@ def get_gcd(num1, num2):
     if (num1 * num2 == 0):  # check if one of them is zero
         return bigger_num  # return maximum of them
 
-    # num of attempts is minimum of (half of bigger number) and (smaller number)
-    gcd_max = min(bigger_num // 2, abs(num1), abs(num2))
+    gcd_max = min(abs(num1), abs(num2))  # num of attempts
 
     result = 1
     i = 2

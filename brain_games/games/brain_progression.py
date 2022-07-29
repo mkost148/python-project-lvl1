@@ -27,7 +27,7 @@ def miss_and_print(progression):
     result_string = 'Question: '
     while i <= len(progression) - 1:
         if i == missing_element_position:
-            result_string = result_string + '... '
+            result_string = result_string + '.. '
         else:
             result_string = result_string + str(progression[i]) + ' '
         i += 1

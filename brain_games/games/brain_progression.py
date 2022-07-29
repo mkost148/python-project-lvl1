@@ -3,6 +3,12 @@ import prompt
 from brain_games.brain_servicelib import check_and_print_answer, hello
 
 
+# constants
+MAXIMUM_STEP_OF_PROGRESSION = 10  # maximum step of arifmetical progression
+MIN_LEN_OF_PROGRESSION = 5  # minimum quantity of numbers of progression
+REC_LEN_OF_PROGRESSION = 10  # recommended numbers of progression to generate
+
+
 def generate_progss(init, step, length):
     """Generate 'length' elements of arifmetical progression from 'init'"""
     res = [init]
@@ -18,7 +24,7 @@ def miss_and_print(progression):
         replaced by '...', return missing element"""
     missing_element_position = random.randint(0, len(progression) - 1)
     i = 0
-    result_string = 'Question: '
+    result_string = 'Question:'
     while i <= len(progression) - 1:
         if i == missing_element_position:
             result_string = result_string + '... '
@@ -29,15 +35,16 @@ def miss_and_print(progression):
     return progression[missing_element_position]
 
 
-def progss(num_of_attempts=3, max_init=20, max_step=10, min_len=5, rec_len=10):
+def progss(num_of_attempts=3, max_init=20):
+    # (num_of_attempts=3, max_init=20, max_step=10, min_len=5, rec_len=10):
     user_name = hello()
 
     print('What number is missing in the progression?')
     scores = 0
     while scores < num_of_attempts:
         init = random.randrange(0, max_init)
-        step = random.randrange(1, max_step)
-        len = random.randrange(min_len, rec_len)
+        step = random.randrange(1, MAXIMUM_STEP_OF_PROGRESSION)
+        len = random.randrange(MIN_LEN_OF_PROGRESSION, REC_LEN_OF_PROGRESSION)
 
         # generate progression, print it, return missing number
         correct_answer = miss_and_print(generate_progss

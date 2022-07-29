@@ -13,7 +13,7 @@ def calc(num_of_attempts=3, difficulty=20):
         num1 = random.randint(0, difficulty)
         num2 = random.randint(0, difficulty)
         oper_type = random.randint(0, 2)  # three operators are available
-        print('Question: ', str(num1), ' ', oper_sym[oper_type], ' ', str(num2))
+        print('Question:', str(num1), '', oper_sym[oper_type], '', str(num2))
 
         if oper_type == 0:  # 'plus'
             correct_answer = num1 + num2

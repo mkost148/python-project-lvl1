@@ -9,13 +9,14 @@ def is_prime(number):
         return False
     i = 2
     max_i = number // 2
+    res = True
     while i <= max_i:
         if number % i == 0:
             # uncomment the following for test
             # print('can be divided by ', str(i))
             return False
         i += 1
-    return True
+    return res
 
 
 def prime(num_of_attempts=3, difficulty=20):
@@ -31,7 +32,7 @@ def prime(num_of_attempts=3, difficulty=20):
         else:
             correct_answer = 'no'
 
-        print('Question: ', str(number))
+        print('Question:', str(number))
         answer = str.lower(prompt.string('Your answer: '))
 
         if check_and_print_answer(answer, correct_answer):

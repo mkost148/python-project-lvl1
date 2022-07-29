@@ -24,7 +24,7 @@ def miss_and_print(progression):
         replaced by '...', return missing element"""
     missing_element_position = random.randint(0, len(progression) - 1)
     i = 0
-    result_string = 'Question:'
+    result_string = 'Question: '
     while i <= len(progression) - 1:
         if i == missing_element_position:
             result_string = result_string + '... '

@@ -29,7 +29,7 @@ def gcd(num_of_attempts=3, difficulty=20):
     while scores < num_of_attempts:
         num1 = random.randint(0, difficulty)
         num2 = random.randint(0, difficulty)
-        print('Question:', str(num1), '', str(num2))
+        print('Question:', str(num1), str(num2))
 
         correct_answer = get_gcd(num1, num2)
 

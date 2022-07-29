@@ -12,7 +12,6 @@ def calc(num_of_attempts=3, difficulty=20):
     while scores < num_of_attempts:
         num1 = random.randint(0, difficulty)
         num2 = random.randint(0, difficulty)
-
         oper_sym = random.choice(operators)
 
         print('Question:', str(num1), oper_sym, str(num2))

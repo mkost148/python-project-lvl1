@@ -15,7 +15,7 @@ def even(num_of_attempts=3, difficulty=20):
     scores = 0
     while scores < num_of_attempts:
         num = random.randint(0, difficulty)
-        print('Question: ', str(num))
+        print('Question:', str(num))
 
         if is_even(num):
             correct_answer = 'yes'

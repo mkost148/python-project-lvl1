@@ -38,11 +38,3 @@ def launch_game(game_type, attempts=NUM_OF_ATTEMPTS):
     elif game_type == 'I':  # Prime or not
         difficulty = prompt.integer('Please enter maximum number: ')
         return prime(attempts, difficulty)
-
-
-def main():
-    return
-
-
-if __name__ == '__main__':
-    main()

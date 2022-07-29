@@ -1,6 +1,6 @@
 import random
 import prompt
-from brain_games.brain_servicelib import check_and_print_answer
+from brain_games.brain_servicelib import check_and_print_answer, hello
 
 
 def is_prime(number):
@@ -19,6 +19,8 @@ def is_prime(number):
 
 
 def prime(num_of_attempts=3, difficulty=20):
+    user_name = hello()
+
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     scores = 0
     while scores < num_of_attempts:
@@ -36,7 +38,11 @@ def prime(num_of_attempts=3, difficulty=20):
             scores += 1
         else:
             scores = num_of_attempts + 1  # stop the game
-    return (scores == num_of_attempts)  # win a game
+
+    if (scores == num_of_attempts):  # check if win a game
+        print(f'Congratulations, {user_name}!')
+    else:
+        print(f"Let's try again, {user_name}!")
 
 
 if __name__ == '__main__':

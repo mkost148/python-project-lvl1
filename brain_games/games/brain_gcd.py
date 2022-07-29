@@ -1,6 +1,6 @@
 import random
 import prompt
-from brain_games.brain_servicelib import check_and_print_answer
+from brain_games.brain_servicelib import check_and_print_answer, hello
 
 
 def get_gcd(num1, num2):
@@ -24,6 +24,8 @@ def get_gcd(num1, num2):
 
 
 def gcd(num_of_attempts=3, difficulty=20):
+    user_name = hello()
+
     print('Find the greatest common divisor of given numbers.')
     scores = 0
     while scores < num_of_attempts:
@@ -39,7 +41,11 @@ def gcd(num_of_attempts=3, difficulty=20):
             scores += 1
         else:
             scores = num_of_attempts + 1  # stop the game
-    return (scores == num_of_attempts)
+
+    if (scores == num_of_attempts):  # check if win a game
+        print(f'Congratulations, {user_name}!')
+    else:
+        print(f"Let's try again, {user_name}!")
 
 
 if __name__ == '__main__':

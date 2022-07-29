@@ -4,7 +4,7 @@
 
 The famous 5-in-1 "Brain Games": "Odd or Even", "Calculator", "Greatest common divisor", "Progression" and "Prime" by Hexlet.
 
-Minimum requirements: python 3
+Minimum requirements: python 3 environment
 
 How to install:
     cd python-project-lvl1
@@ -12,14 +12,17 @@ How to install:
 Asciinema of installation process: https://asciinema.org/a/VnLsnaxKetu4MiEHlH7LCmxic
 
 How to run:
-    after installing, you can run 'brain-go' shell or run each game directly like 'brain-calc' or 'brain-gcd' etc.
+    after installing, you can run each game directly like: 'brain-calc', 'brain'even', 'brain-prime', 'brain-progression', 'brain-gcd'.
 
-"Prime" game: https://asciinema.org/a/wWUHMvMADWGs2RYgNowQzEYCM
+Here are gameplay asciinemas:
 
-"Progression" game: https://asciinema.org/a/QzRbUZ5GZZuPJe9MOQnxHtfvN
-
-"Greatest common divisor": https://asciinema.org/a/Bw8dfhlwSO6eMACQhzsvsQ39m
-
-"Calculator": https://asciinema.org/a/HisEPznj3gb0f8hX3b5WpjGuv
-
-"Odd or Even": https://asciinema.org/a/MzwRpVprsf7lBWQpD8ToTl9qA
+'Calculator'
+    https://asciinema.org/a/E0KJocBAWtPjIeOySBxg1dLLy
+'Odd or Even'
+    https://asciinema.org/a/BYYG5PqahfOvzBw5UwFaTavZc
+'is Prime'
+    https://asciinema.org/a/I8NBdz2TKck8aEhgueMezSplC
+'Arithmetical progression'
+    https://asciinema.org/a/PznhqN4IpzL1z8cMf16iJfWSv
+'Greatest common divisor'
+    https://asciinema.org/a/k1xx5MgVw9vpxGMhUE42cnbIB

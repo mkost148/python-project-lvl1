@@ -1,6 +1,6 @@
 import random
 import prompt
-from brain_games.brain_servicelib import check_and_print_answer
+from brain_games.brain_servicelib import check_and_print_answer, hello
 
 
 def generate_progss(init, step, length):
@@ -30,6 +30,8 @@ def miss_and_print(progression):
 
 
 def progss(num_of_attempts=3, max_init=20, max_step=10, min_len=5, rec_len=10):
+    user_name = hello()
+
     print('What number is missing in the progression?')
     scores = 0
     while scores < num_of_attempts:
@@ -42,11 +44,16 @@ def progss(num_of_attempts=3, max_init=20, max_step=10, min_len=5, rec_len=10):
                                         (init, step, len))
 
         answer = prompt.integer('Your answer: ')
+
         if check_and_print_answer(answer, correct_answer):
             scores += 1
         else:
             scores = num_of_attempts + 1  # stop the game
-    return (scores == num_of_attempts)
+
+    if (scores == num_of_attempts):  # check if win a game
+        print(f'Congratulations, {user_name}!')
+    else:
+        print(f"Let's try again, {user_name}!")
 
 
 if __name__ == '__main__':

@@ -18,11 +18,3 @@ def check_and_print_answer(answer, correct_answer):
               " Correct answer was '", correct_answer, "'."
               )
     return (answer == correct_answer)
-
-
-def main():
-    return
-
-
-if __name__ == '__main__':
-    main()

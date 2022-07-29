@@ -1,9 +1,11 @@
 import random
 import prompt
-from brain_games.brain_servicelib import check_and_print_answer
+from brain_games.brain_servicelib import check_and_print_answer, hello
 
 
 def calc(num_of_attempts=3, difficulty=20):
+    user_name = hello()
+
     oper_sym = ('+', '-', '*')  # three operators are available
     print('What is the result of the expression?')
     scores = 0
@@ -26,7 +28,11 @@ def calc(num_of_attempts=3, difficulty=20):
             scores += 1
         else:
             scores = num_of_attempts + 1  # stop the game
-    return (scores == num_of_attempts)  # check if win a game
+
+    if (scores == num_of_attempts):  # check if win a game
+        print(f'Congratulations, {user_name}!')
+    else:
+        print(f"Let's try again, {user_name}!")
 
 
 if __name__ == '__main__':

@@ -17,12 +17,16 @@ How to run:
 Here are gameplay asciinemas:
 
 'Calculator'
-    https://asciinema.org/a/E0KJocBAWtPjIeOySBxg1dLLy
+    asciinema play https://asciinema.org/a/E0KJocBAWtPjIeOySBxg1dLLy
+
 'Odd or Even'
-    https://asciinema.org/a/BYYG5PqahfOvzBw5UwFaTavZc
+    asciinema play https://asciinema.org/a/BYYG5PqahfOvzBw5UwFaTavZc
+
 'is Prime'
-    https://asciinema.org/a/I8NBdz2TKck8aEhgueMezSplC
+    asciinema play https://asciinema.org/a/I8NBdz2TKck8aEhgueMezSplC
+
 'Arithmetical progression'
-    https://asciinema.org/a/PznhqN4IpzL1z8cMf16iJfWSv
+    asciinema play https://asciinema.org/a/PznhqN4IpzL1z8cMf16iJfWSv
+
 'Greatest common divisor'
-    https://asciinema.org/a/k1xx5MgVw9vpxGMhUE42cnbIB
+    asciinema play https://asciinema.org/a/k1xx5MgVw9vpxGMhUE42cnbIB

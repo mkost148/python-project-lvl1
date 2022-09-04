@@ -11,7 +11,7 @@ def gcd(difficulty):
     question_string = 'Question: ' + str(num1) + ' ' + str(num2)
     bigger_num = max(abs(num1), abs(num2))
     if (num1 * num2 == 0):  # check if one of them is zero
-        return (rule_string, question_string, bigger_num)
+        return (rule_string, question_string, str(bigger_num))
 
     gcd_max = min(abs(num1), abs(num2))  # num of attempts. Might be optimized?!
     result = 1

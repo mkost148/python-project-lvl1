@@ -1,25 +1,16 @@
-import prompt
-from brain_games.brain_go import NUM_OF_ATTEMPTS,\
-    hello, check_and_print_answer, even
+import random
 
 
-def main():
-    user_name = hello()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    scores = 0
-    while scores < NUM_OF_ATTEMPTS:
-        (question_string, correct_answer) = even()
-        print(question_string)
-        answer = str.lower(prompt.string('Your answer: '))
-        if check_and_print_answer(answer, correct_answer):
-            scores += 1
-        else:
-            scores = NUM_OF_ATTEMPTS + 1  # stop the game
-    if (scores == NUM_OF_ATTEMPTS):  # check if win a game
-        print(f'Congratulations, {user_name}!')
+def even(difficulty):
+    ''''Even game. Generate random number.
+        Return 'rule_string', 'question_string'
+        and 'yes' or 'no' depends on is generated number enev or not'''
+
+    rule_string = 'Answer "yes" if the number is even, otherwise answer "no".'
+    num = random.randint(0, difficulty)
+    question_string = 'Question: ' + str(num)
+    if (num % 2) == 0:
+        correct_answer = 'yes'
     else:
-        print(f"Let's try again, {user_name}!")
-
-
-if __name__ == '__main__':
-    main()
+        correct_answer = 'no'
+    return (rule_string, question_string, correct_answer)

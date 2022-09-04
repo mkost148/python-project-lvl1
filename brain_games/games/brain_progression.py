@@ -1,25 +1,40 @@
-import prompt
-from brain_games.brain_go import NUM_OF_ATTEMPTS,\
-    hello, check_and_print_answer, progss
+import random
 
 
-def main():
-    user_name = hello()
-    print('What number is missing in the progression?')
-    scores = 0
-    while scores < NUM_OF_ATTEMPTS:
-        (question_string, correct_answer) = progss()
-        print(question_string)
-        answer = int(prompt.string('Your answer: '))
-        if check_and_print_answer(answer, correct_answer):
-            scores += 1
+# constants
+MAXIMUM_STEP_OF_PROGRESSION = 10  # maximum step of arifmetical progression
+MIN_LEN_OF_PROGRESSION = 5  # minimum quantity of numbers of progression
+REC_LEN_OF_PROGRESSION = 10  # recommended numbers of progression to generate
+
+
+def progss(max_init):
+    '''Progression. Generate arifmetical progression.
+        Return 'rule_string, 'question_string'
+        and 'correct_answer' (missing element, string)'''
+
+    rule_string = 'What number is missing in the progression?'
+
+    # generate progression
+    init = random.randrange(0, max_init)
+    step = random.randrange(1, MAXIMUM_STEP_OF_PROGRESSION)
+    lenght = random.randrange(MIN_LEN_OF_PROGRESSION, REC_LEN_OF_PROGRESSION)
+    progression = [init]
+    i = 1
+    while i < lenght:
+        progression.append(init + step * i)
+        i += 1
+
+    # make one element missing
+    missing_element_position = random.randint(0, len(progression) - 1)
+    i = 0
+    question_string = 'Question: '
+    while i <= len(progression) - 1:
+        if i == missing_element_position:
+            question_string = question_string + '.. '
         else:
-            scores = NUM_OF_ATTEMPTS + 1  # stop the game
-    if (scores == NUM_OF_ATTEMPTS):  # check if win a game
-        print(f'Congratulations, {user_name}!')
-    else:
-        print(f"Let's try again, {user_name}!")
+            question_string = question_string + str(progression[i]) + ' '
+        i += 1
 
-
-if __name__ == '__main__':
-    main()
+    return (rule_string,
+            question_string,
+            str(progression[missing_element_position]))

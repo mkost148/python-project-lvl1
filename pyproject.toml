@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "1.0.1"
+version = "1.0.2"
 description = "My 1st Python project. Five interactive 'Brain games': Calculator, Odd or Even, Progression, Prime, Greatest common divisor"
 authors = ["Mike <mkost148@gmail.com>"]
 packages = [
@@ -13,12 +13,11 @@ repository = "https://github.com/mkost148/python-project-lvl1"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.brain_go:main"
-brain-even = "brain_games.games.brain_even:main"
-brain-calc = "brain_games.games.brain_calc:main"
-brain-gcd = "brain_games.games.brain_gcd:main"
-brain-progression = "brain_games.games.brain_progression:main"
-brain-prime = "brain_games.games.brain_prime:main"
-brain-go = "brain_games.brain_go:main"
+brain-even = "brain_games.brain_go:do_even"
+brain-calc = "brain_games.brain_go:do_calc"
+brain-gcd = "brain_games.brain_go:do_gcd"
+brain-progression = "brain_games.brain_go:do_progss"
+brain-prime = "brain_games.brain_go:do_prime"
 
 [tool.poetry.dependencies]
 python = "^3.10"

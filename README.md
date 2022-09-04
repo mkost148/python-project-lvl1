@@ -15,18 +15,19 @@ How to run:
     after installing, you can run each game directly like: 'brain-calc', 'brain'even', 'brain-prime', 'brain-progression', 'brain-gcd'.
 
 Here are gameplay asciinemas:
-
+<p>
 'Calculator'
 <a href="https://asciinema.org/a/9y0dTzaMBMAbIpA2Mj8imEeOX" target="_blank"><img src="https://asciinema.org/a/9y0dTzaMBMAbIpA2Mj8imEeOX.svg" /></a>
-
+<p>
 'Odd or Even'
 <a href="https://asciinema.org/a/bwq8DxeOa1HshTypoEA8d2NxS" target="_blank"><img src="https://asciinema.org/a/bwq8DxeOa1HshTypoEA8d2NxS.svg" /></a>
-
+<p>
 'is Prime'
 <a href="https://asciinema.org/a/U3hEzmoA2oQEnoKKi0WT7O0QM" target="_blank"><img src="https://asciinema.org/a/U3hEzmoA2oQEnoKKi0WT7O0QM.svg" /></a>
-
+<p>
 'Arithmetical progression'
 <a href="https://asciinema.org/a/513106" target="_blank"><img src="https://asciinema.org/a/513106.svg" /></a>
-
+<p>
 'Greatest common divisor'
 <a href="https://asciinema.org/a/dP7fcL0nixLnIT2BsPmfVeN5L" target="_blank"><img src="https://asciinema.org/a/dP7fcL0nixLnIT2BsPmfVeN5L.svg" /></a>
+<p>

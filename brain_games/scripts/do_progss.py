@@ -1,5 +1,5 @@
-from brain_games.games.brain_progss import progss
-from brain_games.brain_go import hello, do_func
+from brain_games.games.brain_progression import progss
+from brain_games.brain_go import do_func
 
 
 def main():
@@ -7,5 +7,4 @@ def main():
 
 
 if __name__ == '__main__':
-    hello()
     main()

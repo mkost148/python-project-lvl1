@@ -16,9 +16,8 @@ def is_prime(number):  # returns True if 'number' is prime, otherwise False
 
 
 def prime(difficulty):
-    '''Prime game. Generate random number, Return 'rule_string',
-        'question_string'
-        and 'yes' or 'no' depends upon number is prime or not'''
+    '''Prime game. Generate random number.
+       Return 'yes' if number is prime'''
 
     rule_string = 'Answer "yes" if given number is prime. '\
         'Otherwise answer "no".'

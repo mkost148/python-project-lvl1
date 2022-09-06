@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 
 
-# common import
-# from brain_games.games.brain_calc import calc
-# from brain_games.games.brain_progression import progss
-# from brain_games.games.brain_even import even
-# from brain_games.games.brain_gcd import gcd
-# from brain_games.games.brain_prime import prime
 import prompt
 
 

@@ -9,7 +9,8 @@ def is_even(num):  # returns True if 'num' is even, otherwise False
 
 
 def even(difficulty):
-    ''''Even game. Returns 'yes' if number is even'''
+    ''''Even game. '\
+        'Returns 'yes' if number is even'''
 
     rule_string = 'Answer "yes" if the number is even, otherwise answer "no".'
     num = random.randint(0, difficulty)  # generate random number

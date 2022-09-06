@@ -19,7 +19,7 @@ def prime(difficulty):
     '''Prime game. Returns 'yes' if number is prime'''
 
     rule_string = 'Answer "yes" if given number is prime. '\
-        'Otherwise answer "no".'
+                  'Otherwise answer "no".'
     number = random.randint(1, difficulty)  # generate random number
     question_string = str(number)
     if is_prime(number):

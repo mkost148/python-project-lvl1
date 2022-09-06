@@ -13,11 +13,11 @@ repository = "https://github.com/mkost148/python-project-lvl1"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.brain_go:main"
-brain-even = "brain_games.brain_go:do_even"
-brain-calc = "brain_games.brain_go:do_calc"
-brain-gcd = "brain_games.brain_go:do_gcd"
-brain-progression = "brain_games.brain_go:do_progss"
-brain-prime = "brain_games.brain_go:do_prime"
+brain-even = "brain_games.scripts.do_even:main"
+brain-calc = "brain_games.scripts.do_calc:main"
+brain-gcd = "brain_games.scripts.do_gcd:main"
+brain-progression = "brain_games.scripts.do_progss:main"
+brain-prime = "brain_games.scripts.scripts.do_prime:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"

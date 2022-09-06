@@ -16,6 +16,5 @@ def calc(difficulty):
         correct_answer = num1 - num2
     else:  # 'multiply'
         correct_answer = num1 * num2
-    question_string = 'Question: ' + str(num1) +\
-                      ' ' + oper_sym + ' ' + str(num2)
+    question_string = str(num1) + ' ' + oper_sym + ' ' + str(num2)
     return(rule_string, question_string, str(correct_answer))

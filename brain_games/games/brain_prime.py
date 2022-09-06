@@ -1,6 +1,20 @@
 import random
 
 
+def is_prime(number):  # returns True if 'number' is prime, otherwise False
+    if abs(number) == 1:  # '1' is not prime nor combined number
+        return False
+    i = 2
+    max_i = number // 2  # num of iterations
+    while i <= max_i:
+        if number % i == 0:
+            # uncomment the following for test
+            # print('can be divided by ', str(i))
+            return False
+        i += 1
+    return True
+
+
 def prime(difficulty):
     '''Prime game. Generate random number, Return 'rule_string',
         'question_string'
@@ -9,16 +23,9 @@ def prime(difficulty):
     rule_string = 'Answer "yes" if given number is prime. '\
         'Otherwise answer "no".'
     number = random.randint(1, difficulty)
-    question_string = 'Question: ' + str(number)
-    if abs(number) == 1:  # '1' is not prime nor combined number
-        return (rule_string, question_string, 'no')
-    i = 2
-    max_i = number // 2
-    correct_answer = 'yes'
-    while i <= max_i:
-        if number % i == 0:
-            # uncomment the following for test
-            # print('can be divided by ', str(i))
-            return (rule_string, question_string, 'no')
-        i += 1
+    question_string = str(number)
+    if is_prime(number):
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
     return (rule_string, question_string, correct_answer)

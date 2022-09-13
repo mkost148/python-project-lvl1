@@ -2,17 +2,14 @@ import random
 
 
 def get_gcd(num1, num2):  # returns greatest common divisor of 'num1', 'num2'
-    bigger_num = max(abs(num1), abs(num2))
     if (num1 * num2 == 0):  # check if one of them is zero
-        return bigger_num
-    gcd_max = min(abs(num1), abs(num2))  # num of attempts. Might be optimized?!
-    result = 1
-    i = 2
-    while i <= gcd_max:
-        if (num1 % i == 0) and (num2 % i == 0):
-            result = i
-        i += 1
-    return result
+        return num1 + num2  # non-zero element
+    while num1 != 0 and num2 != 0:
+        if num1 > num2:
+            num1 = num1 % num2
+        else:
+            num2 = num2 % num1
+    return (num1 + num2)  # GCD + zero == GCD
 
 
 def gcd(difficulty):

@@ -2,10 +2,7 @@ import random
 
 
 def is_even(num):  # returns True if 'num' is even, otherwise False
-    if (num % 2) == 0:
-        return True
-    else:
-        return False
+    return (num % 2 == 0)
 
 
 def even(difficulty):

@@ -17,7 +17,7 @@ def make_progss(initial_term, common_difference, length):
     return progression
 
 
-def print_progss_exept_one(progression, missing_element_position):
+def stringify(progression, missing_element_position):
     """Print elements from 'progression' exept one\
         at 'missing_element_position' wich replaced by '..'. Return string"""
     i = 0
@@ -46,8 +46,7 @@ def progss(max_init):
 
     # make one element missing
     missing_element_position = random.randint(0, len(progression) - 1)
-    question_string = print_progss_exept_one(progression,
-                                             missing_element_position)
+    question_string = stringify(progression, missing_element_position)
 
     return (rule_string,
             question_string,

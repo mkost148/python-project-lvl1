@@ -12,7 +12,7 @@ classifiers = ["Topic :: Games/Entertainment :: Puzzle Games"]
 repository = "https://github.com/mkost148/python-project-lvl1"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.brain_go:main"
+brain-games = "brain_games.brain_go:do_func"
 brain-even = "brain_games.scripts.do_even:main"
 brain-calc = "brain_games.scripts.do_calc:main"
 brain-gcd = "brain_games.scripts.do_gcd:main"

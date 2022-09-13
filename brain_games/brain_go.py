@@ -8,16 +8,12 @@ NUM_OF_ATTEMPTS = 3  # correct answers to win a game
 DEFAULT_DIFFICULTY = 20  # maximum number to operate with
 
 
-def hello():
-    """Ask for user name"""
+def do_func(game_func=''):
     print('Welcome to the Brain Games!')
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!')
-    return user_name
-
-
-def do_func(game_func):
-    user_name = hello()
+    if game_func == '':
+        return
     (rule_string, question_string, correct_answer) =\
         game_func(DEFAULT_DIFFICULTY)  # first tour of game
     print(rule_string)  # show the rules
@@ -44,9 +40,5 @@ def do_func(game_func):
         print(f"Let's try again, {user_name}!")
 
 
-def main():
-    hello()
-
-
 if __name__ == '__main__':
-    main()
+    do_func()

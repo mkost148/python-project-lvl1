@@ -16,7 +16,7 @@ def is_prime(number):  # returns True if 'number' is prime, otherwise False
 
 
 def prime(difficulty):
-    '''Prime game. Returns 'yes' if number is prime'''
+    '''Prime game'''
 
     rule_string = 'Answer "yes" if given number is prime. '\
                   'Otherwise answer "no".'

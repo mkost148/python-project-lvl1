@@ -21,14 +21,14 @@ def stringify(progression, missing_element_position):
     """Print elements from 'progression' exept one\
         at 'missing_element_position' wich replaced by '..'. Return string"""
     i = 0
-    result_string = ''
+    res_prog = []
     while i <= len(progression) - 1:
         if i == missing_element_position:
-            result_string = result_string + '.. '
+            res_prog.append('..')
         else:
-            result_string = result_string + str(progression[i]) + ' '
+            res_prog.append(str(progression[i]))
         i += 1
-    return result_string
+    return ' '.join(res_prog)
 
 
 def progss(max_init):

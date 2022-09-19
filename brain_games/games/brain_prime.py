@@ -1,6 +1,9 @@
 import random
 
 
+MIN_NUMBER = 1  # minimum number to generate
+
+
 def is_prime(number):  # returns True if 'number' is prime, otherwise False
     if abs(number) == 1:  # '1' is not prime nor combined number
         return False
@@ -20,7 +23,7 @@ def prime(difficulty):
 
     rule_string = 'Answer "yes" if given number is prime. '\
                   'Otherwise answer "no".'
-    number = random.randint(1, difficulty)  # generate random number
+    number = random.randint(MIN_NUMBER, difficulty)  # generate random number
     question_string = str(number)
     if is_prime(number):
         correct_answer = 'yes'

@@ -1,6 +1,9 @@
 import random
 
 
+MIN_NUMBER = 0  # minimum number to generate
+
+
 def get_gcd(num1, num2):  # returns greatest common divisor of 'num1', 'num2'
     if (num1 * num2 == 0):  # check if one of them is zero
         return num1 + num2  # non-zero element
@@ -17,7 +20,7 @@ def gcd(difficulty):
         Return 'rule_string', 'question_string' and 'correct_answer' '''
     rule_string = 'Find the greatest common divisor of given numbers.'
 
-    num1 = random.randint(0, difficulty)
-    num2 = random.randint(0, difficulty)
+    num1 = random.randint(MIN_NUMBER, difficulty)
+    num2 = random.randint(MIN_NUMBER, difficulty)
     question_string = str(num1) + ' ' + str(num2)
     return (rule_string, question_string, str(get_gcd(num1, num2)))

@@ -1,14 +1,17 @@
 import random
 
 
+MIN_NUMBER = 0  # minimum number to generate
+
+
 def calc(difficulty):
     '''Calculator. Returns 'rule_string', 'question_string' and
         'correct_answer' (string)'''
 
     rule_string = 'What is the result of the expression?'
     operators = ("+", "-", "*")  # three operators are available
-    num1 = random.randint(0, difficulty)
-    num2 = random.randint(0, difficulty)
+    num1 = random.randint(MIN_NUMBER, difficulty)
+    num2 = random.randint(MIN_NUMBER, difficulty)
     oper_sym = random.choice(operators)
     if oper_sym == "+":  # 'plus'
         correct_answer = num1 + num2

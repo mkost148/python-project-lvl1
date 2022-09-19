@@ -2,9 +2,11 @@ import random
 
 
 # constants
-MAXIMUM_STEP_OF_PROGRESSION = 10  # maximum step of arifmetical progression
+MAX_DIFF = 10  # maximum step of arifmetical progression
+MIN_DIFF = 1  # minimum step of progression
 MIN_LEN_OF_PROGRESSION = 5  # minimum quantity of numbers of progression
 REC_LEN_OF_PROGRESSION = 10  # recommended numbers of progression to generate
+MIN_NUMBER = 0  # minimum initial item to generate
 
 
 def make_progss(initial_term, common_difference, length):
@@ -39,8 +41,8 @@ def progss(max_init):
     rule_string = 'What number is missing in the progression?'
 
     # generate progression
-    init = random.randrange(0, max_init)
-    diff = random.randrange(1, MAXIMUM_STEP_OF_PROGRESSION)
+    init = random.randrange(MIN_NUMBER, max_init)
+    diff = random.randrange(MIN_DIFF, MAX_DIFF)
     length = random.randrange(MIN_LEN_OF_PROGRESSION, REC_LEN_OF_PROGRESSION)
     progression = make_progss(init, diff, length)
 

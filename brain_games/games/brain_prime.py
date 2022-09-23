@@ -2,6 +2,8 @@ import random
 
 
 MIN_NUMBER = 1  # minimum number to generate
+RULE_STRING = 'Answer "yes" if given number is prime. '\
+              'Otherwise answer "no".'
 
 
 def is_prime(number):  # returns True if 'number' is prime, otherwise False
@@ -18,15 +20,13 @@ def is_prime(number):  # returns True if 'number' is prime, otherwise False
     return True
 
 
-def prime(difficulty):
+def main(difficulty):
     '''Prime game'''
 
-    rule_string = 'Answer "yes" if given number is prime. '\
-                  'Otherwise answer "no".'
     number = random.randint(MIN_NUMBER, difficulty)  # generate random number
     question_string = str(number)
     if is_prime(number):
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
-    return (rule_string, question_string, correct_answer)
+    return (question_string, correct_answer)

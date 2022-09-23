@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/mkost148/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/mkost148/python-project-lvl1/actions)
 <a href="https://codeclimate.com/github/mkost148/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/81e25725e4ae3496409a/maintainability" /></a>
 
-The famous 5-in-1 "Brain Games": "Odd or Even", "Calculator", "Greatest common divisor", "Progression" and "Prime" by Hexlet. Version 1.0.2
+The famous 5-in-1 "Brain Games": "Odd or Even", "Calculator", "Greatest common divisor", "Progression" and "Prime" by Hexlet. Version 1.0.3
 
 Minimum requirements: python 3 environment
 

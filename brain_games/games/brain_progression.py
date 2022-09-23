@@ -7,6 +7,7 @@ MIN_DIFF = 1  # minimum step of progression
 MIN_LEN_OF_PROGRESSION = 5  # minimum quantity of numbers of progression
 REC_LEN_OF_PROGRESSION = 10  # recommended numbers of progression to generate
 MIN_NUMBER = 0  # minimum initial item to generate
+RULE_STRING = 'What number is missing in the progression?'
 
 
 def make_progss(initial_term, common_difference, length):
@@ -33,12 +34,10 @@ def stringify(progression, missing_element_position):
     return ' '.join(res_prog)
 
 
-def progss(max_init):
+def main(max_init):
     '''Progression. Generate arifmetical progression.
         Return 'rule_string, 'question_string'
         and 'correct_answer' (missing element, string)'''
-
-    rule_string = 'What number is missing in the progression?'
 
     # generate progression
     init = random.randrange(MIN_NUMBER, max_init)
@@ -50,6 +49,5 @@ def progss(max_init):
     missing_element_position = random.randint(0, len(progression) - 1)
     question_string = stringify(progression, missing_element_position)
 
-    return (rule_string,
-            question_string,
+    return (question_string,
             str(progression[missing_element_position]))  # correct answer

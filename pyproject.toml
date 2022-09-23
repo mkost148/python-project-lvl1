@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "1.0.2"
+version = "1.0.3"
 description = "My 1st Python project. Five interactive 'Brain games': Calculator, Odd or Even, Progression, Prime, Greatest common divisor"
 authors = ["Mike <mkost148@gmail.com>"]
 packages = [

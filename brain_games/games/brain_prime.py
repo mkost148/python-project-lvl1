@@ -20,7 +20,7 @@ def is_prime(number):  # returns True if 'number' is prime, otherwise False
     return True
 
 
-def main(difficulty):
+def question_and_answer(difficulty):
     '''Prime game'''
 
     number = random.randint(MIN_NUMBER, difficulty)  # generate random number
@@ -29,4 +29,4 @@ def main(difficulty):
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
-    return (question_string, correct_answer)
+    return question_string, correct_answer

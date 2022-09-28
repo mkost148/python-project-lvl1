@@ -10,7 +10,7 @@ MIN_NUMBER = 0  # minimum initial item to generate
 RULE_STRING = 'What number is missing in the progression?'
 
 
-def make_progss(initial_term, common_difference, length):
+def make_progression(initial_term, common_difference, length):
     """Generates an arithmetic progression"""
     progression = [initial_term]
     i = 1
@@ -34,7 +34,7 @@ def stringify(progression, missing_element_position):
     return ' '.join(res_prog)
 
 
-def main(max_init):
+def question_and_answer(max_init):
     '''Progression. Generate arifmetical progression.
         Return 'rule_string, 'question_string'
         and 'correct_answer' (missing element, string)'''
@@ -43,7 +43,7 @@ def main(max_init):
     init = random.randrange(MIN_NUMBER, max_init)
     diff = random.randrange(MIN_DIFF, MAX_DIFF)
     length = random.randrange(MIN_LEN_OF_PROGRESSION, REC_LEN_OF_PROGRESSION)
-    progression = make_progss(init, diff, length)
+    progression = make_progression(init, diff, length)
 
     # make one element missing
     missing_element_position = random.randint(0, len(progression) - 1)

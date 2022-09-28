@@ -6,7 +6,7 @@ RULE_STRING = 'What is the result of the expression?'
 # rule_string = 'What is the result of the expression?'
 
 
-def main(difficulty):
+def question_and_answer(difficulty):
     '''Calculator. Returns 'rule_string', 'question_string' and
         'correct_answer' (string)'''
 
@@ -21,4 +21,4 @@ def main(difficulty):
     else:  # 'multiply'
         correct_answer = num1 * num2
     question_string = str(num1) + ' ' + oper_sym + ' ' + str(num2)
-    return (question_string, str(correct_answer))
+    return question_string, str(correct_answer)

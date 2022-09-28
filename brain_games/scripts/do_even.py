@@ -1,9 +1,9 @@
 from brain_games.games import brain_even
-from brain_games.brain_go import do_func
+from brain_games.brain_go import game
 
 
 def main():
-    do_func(brain_even)
+    game(brain_even)
 
 
 if __name__ == '__main__':
